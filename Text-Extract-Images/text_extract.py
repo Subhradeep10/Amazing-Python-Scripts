@@ -3,7 +3,6 @@ import pytesseract as pt
 import os
 from pathlib import Path
 
-
 current_location = (os.getcwd() + '\\')
 
 
@@ -12,8 +11,6 @@ def extract():
     Function for extracting text from images.
     Additional it saves the text extracted as a txt file.
     """
-
-    # Enter the name of folder which contains img files
     image_location = input("Enter the Folder name containing Images: ")
     image_path = os.path.join(current_location, image_location)
 
@@ -23,8 +20,10 @@ def extract():
 
     # Path to Tesseract
     tesseract_path = input("Enter the Path to Tesseract: ")
-    print('\nNOTE: '
-          'It is preferable to setup the PATH variable to Tesseract, see README. \n')
+    print(
+        '\nNOTE: '
+        'It is preferable to setup the PATH variable to Tesseract, see README. \n'
+    )
 
     #  = r'C:\Program Files\Tesseract-OCR\tesseract'
     pt.pytesseract.tesseract_cmd = tesseract_path

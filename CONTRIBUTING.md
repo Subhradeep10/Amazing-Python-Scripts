@@ -47,12 +47,12 @@ $ git add .
 - To commit give a descriptive message for the convenience of reveiwer by:
 ```
 # This message get associated with all files you have changed
-$ git commit -m 'message
+$ git commit -m "message"
 ```
 - **NOTE**: A PR should have only one commit. Multiple commits should be squashed.
 ## Step 6 : Work Remotely
-- Now you are ready to your work to the remote repository.
-- When your work is ready and complies with the project conventions, upload your changes to your fork:
+- Now you are ready to push your work to the remote repository.
+- Once your work is ready and adheres to the project conventions, upload your changes to your fork:
 
 ```
 # To push your work to your remote repository

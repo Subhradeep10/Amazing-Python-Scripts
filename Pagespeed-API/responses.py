@@ -1,13 +1,16 @@
 import json
+
+
 class Response(object):
     """ 
     Base Response Object
-    
+
     Attributes:
         self.json (dict): JSON representation of response
         self._request (str): URL of
         self._response (`requests.models.Response` object): Response object from requests module
     """
+
     def __init__(self, response):
         response.raise_for_status()
 
@@ -19,13 +22,12 @@ class Response(object):
 class PageSpeedResponse(Response):
     """ 
     PageSpeed Response Object
-    
+
     Attributes:
         self.url (str):
         self.speed (int):
         self.statistics (`Statistics` object):
     """
-
     @property
     def url(self):
         return self._json['id']
@@ -46,7 +48,7 @@ class PageSpeedResponse(Response):
         originLoadingExperienceDetailed_ = {}
 
         for each in keys_:
-            originLoadingExperienceDetailed_[each] = metrics[each]['category']             
+            originLoadingExperienceDetailed_[each] = metrics[each]['category']
 
         return originLoadingExperienceDetailed_
 
@@ -58,7 +60,7 @@ class PageSpeedResponse(Response):
         loadingExperienceDetailed_ = {}
 
         for each in keys_:
-            loadingExperienceDetailed_[each] = metrics[each]['category']             
+            loadingExperienceDetailed_[each] = metrics[each]['category']
 
         return loadingExperienceDetailed_
 
